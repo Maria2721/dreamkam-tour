@@ -1,0 +1,24 @@
+@import "vars";
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  background: $white;
+  font-weight: 400;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
