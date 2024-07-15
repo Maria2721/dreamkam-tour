@@ -22,3 +22,27 @@ main {
   justify-content: center;
   width: 100%;
 }
+
+.container__row {
+  width: 100%;
+  max-width: 1248px;
+  //padding: 0 40px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
