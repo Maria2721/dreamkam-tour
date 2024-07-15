@@ -1,14 +1,10 @@
-@import '../../styles/common.scss';
+@import '../../styles/vars';
 
 .banner {
-  position: absolute;
-  top: -75px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 0;
-  height: 100%;
-  max-height: 833px;
+  height: 833px;
+  /*height: 100%;
+  max-height: 833px;*/
 
   background-image: image-set("../../assets/imgs/banner_tour_1x.jpg" 1x, "../../assets/imgs/banner_tour_2x.jpg" 2x);
   background-repeat: no-repeat;
@@ -27,4 +23,119 @@
   color: $white;
   letter-spacing: 0.04em;
   margin-top: 163px;
+  margin-bottom: 25px;
 }
+
+.info {
+  padding-left: 3px;
+
+  .accentBox {
+    width: 481px;
+    height: 61px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    background-color: $secondary;
+    background-image: linear-gradient(143deg, #fb8b62 0%, #f47648 100%);
+    backdrop-filter: blur(68px);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: $second-family;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 187%;
+    color: $white;
+  }
+
+  .text {
+    width: fit-content;
+    margin-bottom: 18px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: $white;
+  }
+
+  .link {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 151px;
+
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin-left: 18px;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    a:first-child {
+      margin-right: 25px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 458px;
+  right: -54px;
+  z-index: 1;
+  width: 758px;
+  height: 326px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .currentCard {
+      width: 267px;
+      height: 267px;
+      border: solid 2px red;
+    }
+
+    .card {
+      width: 209px;
+      height: 209px;
+      border: solid 2px green;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+
+    button:first-child {
+      margin-right: 16px;
+    }
+  }
+}
+

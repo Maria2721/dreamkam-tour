@@ -1,7 +1,13 @@
-@import '../../styles/common.scss';
+@import '../../styles/vars';
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
+  height: 75px;
 }
 
 .inner {
@@ -44,7 +50,7 @@
 .bookBtn {
   width: 177px;
   height: 40px;
-  border: 1px solid $primary;
+  border: 1px solid currentColor;
   border-radius: 5px;
 
   font-family: $font-family;

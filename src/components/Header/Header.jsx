@@ -1,5 +1,5 @@
 import styles from './Header.module.scss'
-import Logo from "../../assets/imgs/logo.svg?react";
+import LogoIcon from "../../assets/imgs/icons/logo.svg?react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 
@@ -17,9 +17,9 @@ const Header = () => {
         <header className={[styles.header, 'container'].join(' ')}>
             <div className={[styles.inner, 'container__row'].join(' ')}>
                 <Link to="/" className={styles.logo} onClick={scrollToTop}>
-                    <Logo className={styles.logoIcon}/>
+                    <LogoIcon className={styles.logoIcon}/>
                 </Link>
-                <div className={styles.links}>
+                <nav className={styles.links}>
                     <HashLink smooth to="/#schedule" className={styles.link}>
                         Расписание тура
                     </HashLink>
@@ -29,8 +29,8 @@ const Header = () => {
                     <HashLink smooth to="/#team" className={styles.link}>
                         Команда
                     </HashLink>
-                </div>
-                <button className={styles.bookBtn}>Забронировать</button>
+                </nav>
+                <button type="button" className={styles.bookBtn}>Забронировать</button>
             </div>
         </header>
     )
