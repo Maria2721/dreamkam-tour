@@ -2,9 +2,8 @@ import styles from './BannerTour.module.scss'
 import ArrowDiagIcon from '../../assets/imgs/icons/arrow_diagonal.svg?react'
 import FacebookIcon from '../../assets/imgs/icons/facebook.svg?react'
 import InstagramIcon from '../../assets/imgs/icons/instagram.svg?react'
-import ArrowLeftIcon from '../../assets/imgs/icons/arrow_left.svg?react'
-import ArrowRightIcon from '../../assets/imgs/icons/arrow_right.svg?react'
 import {HashLink} from "react-router-hash-link";
+import Slider from "../Slider/Slider.jsx";
 
 const BannerTour = () => {
     return (
@@ -30,21 +29,7 @@ const BannerTour = () => {
                         </a>
                     </div>
                 </div>
-                <div className={styles.slider}>
-                    <div className={styles.cards}>
-                        <div className={styles.currentCard}></div>
-                        <div className={styles.card}></div>
-                        <div className={styles.card}></div>
-                    </div>
-                    <div className={styles.buttons}>
-                        <button type="button">
-                            <ArrowLeftIcon/>
-                        </button>
-                        <button type="button">
-                            <ArrowRightIcon/>
-                        </button>
-                    </div>
-                </div>
+                <Slider/>
             </div>
         </section>
     )
