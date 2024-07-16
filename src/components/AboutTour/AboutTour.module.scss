@@ -1,0 +1,74 @@
+@import '../../styles/vars';
+
+.about {
+  height: 667px;
+}
+
+.inner {
+}
+
+.title {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 117%;
+  color: #121212;
+  margin-top: 120px;
+  margin-bottom: 27px;
+}
+
+.subtitle {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: #313131;
+  opacity: 0.8;
+  margin-bottom: 35px;
+}
+
+.text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #313131;
+  opacity: 0.8;
+  margin-bottom: 64px;
+}
+
+.info {
+  width: 758px;
+  height: 88px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .caption {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: $black;
+  }
+
+  .value {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: $black;
+  }
+}
