@@ -44,6 +44,16 @@ const AboutTour = () => {
                         <p className={styles.value}>Отель, без палаток</p>
                     </div>
                 </div>
+                <p className={styles.kamchatka}>
+                    Камчатка – земля великолепной заснеженной <br/>природы, действующих вулканов и диких мест, <br/>где
+                    ещё не ступала нога человека.
+                </p>
+                <div className={styles.review}>
+                    <p className={styles.text}>“Когда мы подлетали к Камчатке, у меня <br/>захватило дух от увиденного.
+                        Это за <br/>гранью
+                        реальности. Невероятно!”</p>
+                    <p className={styles.name}>Максим, <span>@max_max</span></p>
+                </div>
             </div>
         </section>
     )
