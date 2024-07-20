@@ -46,7 +46,7 @@ const DayOne = () => {
                     <p>Вечером, после прибытия на Камчатку всех участников (если рейсы разные), общая встреча, проверка
                         снаряжения, обсуждение программы завтрашнего дня.</p>
                 </div>
-                <Slider cards={arrCards} section="dayone" shift={314}/>
+                <Slider cards={arrCards} section='dayone' shift={314} swipe='right'/>
             </div>
         </section>
     )

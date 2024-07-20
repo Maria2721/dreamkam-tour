@@ -59,7 +59,7 @@ const BannerTour = () => {
                         </a>
                     </div>
                 </div>
-                <Slider cards={arrCards} section="banner" shift={245}/>
+                <Slider cards={arrCards} section='banner' shift={245} swipe='right'/>
             </div>
         </section>
     )

@@ -1,0 +1,57 @@
+@import '../../styles/vars';
+
+.daytwo {
+  height: 861px;
+  background-image: image-set("../../assets/imgs/background/volcano_1x.jpg" 1x, "../../assets/imgs/background/volcano_2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right top;
+  margin-bottom: 80px;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $black;
+  margin-top: 65px;
+  margin-bottom: 48px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+.text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #313131;
+}
+
+.text_left {
+  width: 548px;
+  height: 144px;
+  margin-bottom: 168px;
+}
+
+.text_right {
+  width: 478px;
+  height: 216px;
+  align-self: flex-end;
+
+  span {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
