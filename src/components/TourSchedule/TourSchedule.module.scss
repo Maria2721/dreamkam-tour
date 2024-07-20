@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+
+.wrapper {
+  position: relative;
+}
+
+.path {
+  position: absolute;
+  top: 87px;
+  left: calc(23px + (100% - 1440px) / 2); // ???
+  z-index: 1;
+}

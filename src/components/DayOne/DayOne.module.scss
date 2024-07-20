@@ -1,0 +1,41 @@
+@import '../../styles/vars';
+
+.dayone {
+  height: 833px;
+  background-image: image-set("../../assets/imgs/background/forest_clouds_1x.jpg" 1x, "../../assets/imgs/background/forest_clouds_2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $white;
+  margin-top: 80px;
+  margin-bottom: 48px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+.text {
+  width: 461px;
+  height: 360px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #acacac;
+}
