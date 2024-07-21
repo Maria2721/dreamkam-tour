@@ -277,4 +277,88 @@
   }
 }
 
+.slider_daythree {
+  top: 49px;
+  right: calc(864px - 96px);
+  width: calc(672px - 96px);
+  height: 413px;
+  align-items: flex-end;
+
+  .cards {
+    align-items: center;
+    height: 320px;
+
+    .container {
+      margin-left: 32px;
+    }
+
+    .currentCard {
+      width: 320px;
+      height: 320px;
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+
+    .card {
+      width: 282px;
+      height: 282px;
+    }
+
+    .currentOverlay {
+      height: 160px;
+      background: linear-gradient(0deg, #000 1.71%, rgba(0, 0, 0, 0.57) 61.81%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0);
+      padding: 24px 16px;
+
+      p {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        color: $gray;
+      }
+
+      h6 {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: $white;
+        margin-bottom: 4px;
+      }
+    }
+
+    .overlay {
+      height: 160px;
+      background: linear-gradient(0deg, #000 1.71%, rgba(0, 0, 0, 0.57) 61.81%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0);
+      padding: 17px 16px;
+
+      p {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 167%;
+        color: $gray;
+      }
+
+      h6 {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 171%;
+        color: $white;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .button {
+    svg path {
+      fill: $black;
+    }
+
+    svg rect {
+      stroke: $black;
+    }
+  }
+}
+
 

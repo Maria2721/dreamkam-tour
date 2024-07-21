@@ -5,7 +5,7 @@ import ArrowRightIcon from "../../assets/imgs/icons/arrow_right.svg?react";
 
 // eslint-disable-next-line react/prop-types
 const Slider = ({cards = [], section = '', shift = 0, swipe = 'right'}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(swipe === 'right' ? 0 : cards.length - 1);
     const [position, setPosition] = useState(0);
     const handlePrev = () => {
         setCurrentIndex((prevIndex) =>
@@ -24,7 +24,7 @@ const Slider = ({cards = [], section = '', shift = 0, swipe = 'right'}) => {
     return (
         <div className={[styles.slider, styles[`slider_${section}`]].join(" ")}>
             <div className={styles.cards} style={{
-                transform: `translateX(${swipe === 'right' ? position : -position}px)`,
+                transform: `translateX(${position}px)`,
                 transition: 'transform 0.5s ease-in-out',
             }}>
                 {cards.map((card, index) => (
@@ -39,12 +39,12 @@ const Slider = ({cards = [], section = '', shift = 0, swipe = 'right'}) => {
                 ))}
             </div>
             <div className={styles.buttons}>
-                <button type="button" className={styles.button} onClick={swipe === 'right' ? handlePrev : handleNext}
-                        disabled={swipe === 'right' ? currentIndex === 0 : currentIndex === cards.length - 1}>
+                <button type="button" className={styles.button} onClick={handlePrev}
+                        disabled={currentIndex === 0}>
                     <ArrowLeftIcon/>
                 </button>
-                <button type="button" className={styles.button} onClick={swipe === 'right' ? handleNext : handlePrev}
-                        disabled={swipe === 'right' ? currentIndex === cards.length - 1 : currentIndex === 0}>
+                <button type="button" className={styles.button} onClick={handleNext}
+                        disabled={currentIndex === cards.length - 1}>
                     <ArrowRightIcon/>
                 </button>
             </div>

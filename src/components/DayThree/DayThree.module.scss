@@ -1,0 +1,43 @@
+@import '../../styles/vars';
+
+.daythree {
+  height: 797px;
+  background-image: image-set("../../assets/imgs/background/mountains_1x.jpg" 1x, "../../assets/imgs/background/mountains_2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-right: calc(132px - 96px);
+}
+
+.title {
+  width: 501px;
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $black;
+  margin-top: 0;
+  margin-bottom: 48px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+.text {
+  width: 501px;
+  height: 312px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $black;
+}
