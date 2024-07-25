@@ -1,0 +1,51 @@
+@import '../../styles/vars';
+
+.dayfour {
+  height: 834px;
+  background-color: #000000;
+  background-image: image-set("../../assets/imgs/internal/seagull_1x.png" 1x, "../../assets/imgs/internal/seagull_2x.png" 2x);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right 102px bottom 38px;
+  margin-bottom: 0;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.picture {
+}
+
+.title {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $white;
+  margin-top: 102px;
+  margin-bottom: 48px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+.text {
+  width: 461px;
+  height: 312px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #acacac;
+
+  span {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
