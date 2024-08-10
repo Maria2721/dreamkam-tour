@@ -5,6 +5,7 @@ import DayTwo from "../DayTwo/DayTwo.jsx";
 import OnRoute from "../OnRoute/OnRoute.jsx";
 import DayThree from "../DayThree/DayThree.jsx";
 import DayFour from "../DayFour/DayFour.jsx";
+import DayFiveSix from "../DayFiveSix/DayFiveSix.jsx";
 
 const TourSchedule = () => {
     return (
@@ -15,6 +16,7 @@ const TourSchedule = () => {
             <OnRoute/>
             <DayThree/>
             <DayFour/>
+            <DayFiveSix/>
         </div>
     )
 }
