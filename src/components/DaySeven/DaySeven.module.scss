@@ -1,7 +1,7 @@
 @import '../../styles/vars';
 
-.daysix {
-  height: 603px;
+.dayseven {
+  height: calc(1121px - 33px);
 }
 
 .inner {
@@ -12,13 +12,25 @@
   align-items: flex-start;
 }
 
+.left_wrapper {
+  width: 548px;
+  height: 360px;
+}
+
+.right_wrapper {
+  width: 481px;
+  height: 322px;
+  margin-top: 48px;
+  align-self: flex-end;
+}
+
 .title {
   font-family: $third-family;
   font-weight: 700;
   font-size: 40px;
   line-height: 125%;
-  color: $white;
-  margin-top: 0;
+  color: $black;
+  margin-top: calc(116px - 33px);
   margin-bottom: 48px;
 
   span {
@@ -27,13 +39,16 @@
 }
 
 .text {
-  width: 501px;
-  height: 168px;
   font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: $white;
+  color: #313131;
+
+  span {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
 }
 
 .subtitle {
@@ -41,8 +56,8 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
-  color: $white;
-  margin-top: 35px;
+  color: $black;
+  margin-top: 48px;
   margin-bottom: 31px;
 }
 
@@ -64,7 +79,7 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 150%;
-      color: $white;
+      color: #000000;
     }
 
     .block_text {
@@ -74,7 +89,7 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 171%;
-      color: $gray;
+      color: #313131;
       opacity: 0.7;
     }
   }

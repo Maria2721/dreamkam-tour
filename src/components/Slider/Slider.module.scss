@@ -613,6 +613,62 @@
   }
 }
 
+.slider_dayseven {
+  top: calc(731px - 33px);
+  right: calc(610px - 96px);
+  width: calc(1024px - 192px);
+  height: 390px;
+  align-items: flex-end;
+
+  .cards {
+    align-items: center;
+    height: 320px;
+
+    .container {
+      margin-left: 32px;
+    }
+
+    .currentCard, .card {
+      width: 320px;
+      height: 320px;
+    }
+
+    .currentOverlay, .overlay {
+      height: 160px;
+      background: linear-gradient(0deg, #000 1.71%, rgba(0, 0, 0, 0.57) 61.81%, rgba(0, 0, 0, 0) 100%), rgba(0, 0, 0, 0);
+      padding: 24px 16px;
+
+      p {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 171%;
+        color: $gray;
+      }
+
+      h6 {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color: $white;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .button {
+    svg path {
+      fill: $black;
+    }
+
+    svg rect {
+      stroke: $black;
+    }
+  }
+}
+
+
 
 
 

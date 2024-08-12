@@ -7,6 +7,7 @@ const DayFiveSix = () => {
         <div className={styles.wrapper}>
             <DayFive/>
             <DaySix/>
+            <div className={styles.wrapper_clouds}></div>
         </div>
     )
 }
