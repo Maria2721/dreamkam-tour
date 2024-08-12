@@ -1,0 +1,42 @@
+@import '../../styles/vars';
+
+.dayeight {
+  height: 718px;
+  background-image: image-set("../../assets/imgs/background/departure_1x.jpg" 1x, "../../assets/imgs/background/departure_2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: $white;
+  margin-top: 311px;
+  margin-bottom: 48px;
+
+  span {
+    color: $secondary;
+  }
+}
+
+.text {
+  width: 501px;
+  height: 48px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $white;
+  margin-left: 84px;
+}

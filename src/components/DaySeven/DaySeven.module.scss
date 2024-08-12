@@ -1,7 +1,12 @@
 @import '../../styles/vars';
 
 .dayseven {
-  height: calc(1121px - 33px);
+  height: calc(1121px - 33px - 70px);
+  background-image: image-set("../../assets/imgs/background/geysers_clouds_1x.jpg" 1x, "../../assets/imgs/background/geysers_clouds_2x.jpg" 2x);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: right;
+  background-position-y: top -33px;
 }
 
 .inner {

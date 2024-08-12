@@ -7,6 +7,7 @@ import DayThree from "../DayThree/DayThree.jsx";
 import DayFour from "../DayFour/DayFour.jsx";
 import DayFiveSix from "../DayFiveSix/DayFiveSix.jsx";
 import DaySeven from "../DaySeven/DaySeven.jsx";
+import DayEight from "../DayEight/DayEight.jsx";
 
 const TourSchedule = () => {
     return (
@@ -19,6 +20,7 @@ const TourSchedule = () => {
             <DayFour/>
             <DayFiveSix/>
             <DaySeven/>
+            <DayEight/>
         </div>
     )
 }
