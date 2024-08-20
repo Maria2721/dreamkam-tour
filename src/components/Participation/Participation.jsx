@@ -1,6 +1,6 @@
 import styles from "./Participation.module.scss";
 import {HashLink} from "react-router-hash-link";
-import Request from "../Request/Request.jsx";
+import RequestForm from "../RequestForm/RequestForm.jsx";
 import ArrowDiagIcon from '../../assets/imgs/icons/arrow_diagonal.svg?react';
 import FacebookIcon from "../../assets/imgs/icons/facebook_2.svg?react";
 import InstagramIcon from "../../assets/imgs/icons/instagram_2.svg?react";
@@ -70,17 +70,17 @@ const Participation = () => {
                 <div className={styles.request}>
                     <h2 className={styles.title}>Онлайн-заявка</h2>
                     <div className={styles.social}>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-                            <InstagramIcon className={styles.icon}/>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className={styles.inst}>
+                            <InstagramIcon className={styles.icon_inst}/>
                         </a>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                            <FacebookIcon className={styles.icon}/>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" className={styles.fb}>
+                            <FacebookIcon className={styles.icon_fb}/>
                         </a>
-                        <a href="https://vk.com/" target="_blank" rel="noreferrer">
-                            <VkIcon className={styles.icon}/>
+                        <a href="https://vk.com/" target="_blank" rel="noreferrer" className={styles.vk}>
+                            <VkIcon className={styles.icon_vk}/>
                         </a>
                     </div>
-                    <Request/>
+                    <RequestForm/>
                 </div>
                 <div className={styles.booklet}>
                     <img src="" alt="booklet"/>

@@ -1,0 +1,287 @@
+@import '../../styles/vars';
+
+.requestForm {
+  width: 564px;
+  height: 638px;
+
+  display: grid;
+  grid-template-columns: 260px 260px;
+  grid-template-rows: 77px auto auto auto 40px;
+  grid-template-areas:
+          "name quantity"
+          "rate rate"
+          "date ."
+          "comment_box comment_box"
+          ". button_sub";
+  justify-content: space-between;
+  align-items: start;
+}
+
+.label {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: $black;
+}
+
+.input {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: $black;
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+  }
+}
+
+.error {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: $secondary;
+  margin-bottom: 2px;
+}
+
+.name, .quantity, .date, .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .input_wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+
+.name {
+  grid-area: name;
+  width: 260px;
+  height: 77px;
+
+  .input {
+    width: 260px;
+    height: 37px;
+    background-color: inherit;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $black;
+  }
+
+  .input_error {
+    border: 1px solid $secondary;
+  }
+}
+
+.quantity {
+  grid-area: quantity;
+  width: 260px;
+  height: 77px;
+
+  .input_container {
+    width: 260px;
+    height: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: inherit;
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $black;
+
+    .input {
+      width: 100%;
+      height: 37px;
+    }
+
+    .icon_minus, .icon_plus {
+      width: 16px;
+      height: 16px;
+
+      &:hover {
+        cursor: pointer;
+
+        line {
+          stroke: $secondary;
+        }
+      }
+    }
+
+    .icon_plus {
+      margin: 0 2px 0 31px;
+    }
+
+    .icon_minus {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .input {
+    background-color: inherit;
+    border: none;
+  }
+
+  .input_container_error {
+    border: 1px solid $secondary;
+  }
+}
+
+.rate {
+  grid-area: rate;
+  width: 564px;
+  height: 199px;
+  margin: 48px 0 38px 0;
+  display: flex;
+  flex-direction: column;
+
+  .input_wrapper {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .label_rate {
+    display: flex;
+    justify-content: flex-start;
+
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #000000;
+
+    span {
+      margin-left: auto;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+
+  .inputRadio {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $primary;
+    background-color: $white;
+    transition: 0.2s all linear;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary;
+    }
+  }
+
+  .inputRadio:checked {
+    background-color: $primary;
+  }
+
+  .inputRadio_error {
+    border: 2px solid $secondary;
+  }
+
+  .error {
+    position: absolute;
+    top: -16px;
+  }
+}
+
+.date {
+  grid-area: date;
+  width: 260px;
+  height: 72px;
+  margin-bottom: 37px;
+
+  .input {
+    width: 260px;
+    height: 32px;
+    background-color: inherit;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid $black;
+    padding: 0 24px 0 0;
+  }
+
+  .input_error {
+    border: 1px solid $secondary;
+  }
+
+  .calendar {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 4px 0 4px 0;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.comment {
+  grid-area: comment_box;
+  width: 564px;
+  height: 78px;
+  margin-bottom: 48px;
+
+  .input {
+    width: 564px;
+    height: 38px;
+    background-color: inherit;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid $black;
+  }
+
+  .input_error {
+    border: 1px solid $secondary;
+  }
+}
+
+.button {
+  grid-area: button_sub;
+  justify-self: flex-end;
+  width: 179px;
+  height: 40px;
+  border-radius: 5px;
+  background: $secondary;
+  //opacity: 0.7;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: $white;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 2px solid $primary;
+  }
+}
