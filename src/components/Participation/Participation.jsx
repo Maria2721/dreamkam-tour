@@ -1,4 +1,5 @@
 import styles from "./Participation.module.scss";
+import {useState} from "react";
 import {HashLink} from "react-router-hash-link";
 import RequestForm from "../RequestForm/RequestForm.jsx";
 import ArrowDiagIcon from '../../assets/imgs/icons/arrow_diagonal.svg?react';
@@ -7,8 +8,52 @@ import InstagramIcon from "../../assets/imgs/icons/instagram_2.svg?react";
 import VkIcon from "../../assets/imgs/icons/vk.svg?react";
 import IncludedIcon from "../../assets/imgs/icons/included.svg?react";
 import ExtraIcon from "../../assets/imgs/icons/extra.svg?react";
+import Magazine from "../../assets/imgs/internal/magazine.png";
 
 const Participation = () => {
+    const [email, setEmail] = useState('');
+    const [error, setError] = useState('');
+
+    const handleChange = (e) => {
+        setEmail(e.target.value)
+    }
+
+    const blurHandler = () => {
+        setError('');
+        const error = validate();
+        setError(error);
+    }
+
+    const handleSubmit = () => {
+        const error = validate();
+
+        if (error.length === 0) {
+            console.log('Email submitted successfully!');
+            setEmail('');
+            setError('');
+        } else {
+            console.log('Email submission failed due to validation errors.');
+            setError(error);
+        }
+    }
+
+    const validate = () => {
+        const regexEmail =
+            /^[a-zA-Z0-9][a-zA-Z0-9.\-_]+@[a-zA-Z0-9.\-_]+\.[a-zA-Z]{2,63}$/;
+        let error = '';
+
+        if (email.length === 0) {
+            error = 'Необходимо заполнить';
+        } else if (!regexEmail.test(email.trim())) {
+            error = 'Недопустимый формат';
+        } else if (email.length < 5) {
+            error = 'Минимум 5 символов';
+        } else if (email.length > 200) {
+            error = 'Максимум 200 символов';
+        }
+        return error;
+    }
+
     return (
         <section className={[styles.participation, 'container'].join(' ')}>
             <div className={[styles.inner, 'container__row'].join(' ')}>
@@ -83,12 +128,21 @@ const Participation = () => {
                     <RequestForm/>
                 </div>
                 <div className={styles.booklet}>
-                    <img src="" alt="booklet"/>
-                    <h2 className={styles.title}>Что нужно знать отправляясь на Камчатку?</h2>
-                    <p className={styles.text}>Получите памятку туриста просто оставив свой e-mail.</p>
-                    <div className={styles.email}>
-                        <input type="text" placeholder="Ваш e-mail"/>
-                        <button type="button" className={styles.bookBtn}>Получить</button>
+                    <img className={styles.image} src={Magazine} alt="booklet"/>
+                    <div className={styles.wrapper}>
+                        <h2 className={styles.title}>Что нужно знать отправляясь на Камчатку?</h2>
+                        <p className={styles.text}>Получите памятку туриста просто оставив свой e-mail.</p>
+                        <div className={styles.email}>
+                            <div className={styles.input_wrapper}>
+                                {error && <div className={styles.error}>{error}</div>}
+                                <input type="email" id="email" value={email} placeholder="Ваш e-mail"
+                                       className={[styles.input, error !== "" ? styles.input_error : ''].join(' ')}
+                                       onChange={(e) => handleChange(e)}
+                                       onBlur={() => blurHandler()}/>
+                            </div>
+                            <button type="button" className={styles.button} onClick={() => handleSubmit()}>Получить
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
